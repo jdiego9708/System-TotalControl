@@ -24,9 +24,9 @@ Assembly GetAssemblyByName(string name)
     return assembly;
 }
 
-var a = GetAssemblyByName("SISTotalControl.API");
+var a = GetAssemblyByName("SISTotalControl.Entidades");
 
-using var stream = a.GetManifestResourceStream("SISTotalControl.API.appsettings.json");
+using var stream = a.GetManifestResourceStream("SISTotalControl.Entidades.Configuracion.ConfiguracionAPI.appsettings.json");
 
 var config = new ConfigurationBuilder()
     .AddJsonStream(stream)
